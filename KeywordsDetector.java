@@ -5,7 +5,7 @@ public class KeywordsDetector {
             "Programming is both painful and engaging",
             "This has nothing to do with machine learning",
             "We need to leverage our core competencies",
-            "Let's talk about data and algorithms",
+            "Ljavaet's talk about data and algorithms",
             "Chatbots are great but must be used carefully",
             "This blockchain-based solution will disrupt the industry",
             "The team showed great Synergy in the last project",
@@ -21,13 +21,13 @@ public class KeywordsDetector {
     // Iterates through all the sentences.
     // If a sentence contains one or more of the kewords, prints it.
     public static void detectAndPrint(String[] sentences, String[] keywords) {
-        for(int i = 0 ; i<keywords.length; i++)
+        for(int i = 0 ; i<sentences.length; i++)
         {
-            for(int j = 0 ; j <sentences.length;j++)
+            for(int j = 0 ; j <keywords.length;j++)
             {
-                if(MyString.contains(sentences[j],keywords[i]))
+                if(MyString.contains(sentences[i],keywords[j]))
                 {
-                    System.out.println(sentences[j]);
+                    System.out.println(sentences[i]);
                 }
             }
         }
