@@ -5,7 +5,11 @@ public class Primes {
         int counter = 0;
 
         for (int i = 0; i < P.length; i++) {
-            P[i] = i > 1;
+            if (i > 1) {
+                P[i] = true;
+            } else {
+                P[i] = false;
+            }
         }
 
         for (int i = 2; i <= Math.sqrt(N); i++) {
@@ -16,14 +20,15 @@ public class Primes {
             }
         }
 
-        for (int i = 2; i <= N; i++) {
-            if (P[i]) {
+        System.out.println("Prime numbers up to " + N + ":");
+        for (int j = 0; j < P.length; j++) {
+            if (P[j]) {
                 counter++;
-                System.out.println(i);
+                System.out.println(j);
             }
         }
 
-        double s = ((double) counter / (double) N) * 100;
-        System.out.printf("There are %d primes between 2 and %d (%d%% are primes)%n", counter, N, (int) s);
-        }
+        double percentage = ((double) counter / N) * 100;
+        System.out.printf("There are %d primes between 2 and %d (%.0f%% are primes)%n", counter, N, percentage);
+    }
     }
