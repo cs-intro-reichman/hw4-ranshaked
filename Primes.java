@@ -28,7 +28,7 @@ public class Primes {
                 System.out.println(j);
             }
         }
-        double s =((double)counter/(double)N)*100;
+        double s =((double)counter/(double)(N-2))*100;
         System.out.println("There are "+counter+" primes between 2 and "+N+" ("+ (int)s + "% are primes)");
     }
 }
