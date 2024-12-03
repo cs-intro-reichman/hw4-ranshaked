@@ -20,7 +20,7 @@ public class Primes {
                 }
             }
         }
-        for(int j = 0; j<P.length; j++)
+        for(int j = 2; j<=N; j++)
         {
             if(P[j])
             {
@@ -29,6 +29,6 @@ public class Primes {
             }
         }
         double s =((double)counter/(double)N)*100;
-        System.out.println("There are " + counter + " primes between 2 and " + N + " (" + (int)s + "%25 are primes)");
+        System.out.println("There are " + counter + " primes between 2 and " + N + " (" + (int)s + "% are primes)");
     }
 }
